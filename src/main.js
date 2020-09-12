@@ -1,4 +1,12 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import Chakra, { CThemeProvider } from '@chakra-ui/vue';
+import App from './App.vue';
+import router from './router';
 
-createApp(App).mount('#app')
+Vue.use(Chakra);
+
+new Vue({
+  el: '#app',
+  router,
+  render: (h) => h(CThemeProvider, [h(App)]),
+}).$mount();
