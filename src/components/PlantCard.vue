@@ -1,10 +1,10 @@
 <template>
-  <c-box m="5px" background="#ffffff" w="320px" shadow="sm" rounded="md">
+  <c-box m="10px" background="#ffffff" w="380px" shadow="sm" rounded="md">
     <c-flex direction="row">
       <c-box>
         <c-image
-          w="160px"
-          h="180px"
+          w="150px"
+          h="150px"
           objectFit="cover"
           roundedTopLeft="md"
           roundedBottomLeft="md"
@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: "PlantCard",
+  name: 'PlantCard',
   props: {
     plant: Object,
   },

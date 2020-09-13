@@ -2,7 +2,9 @@
   <div id="app">
     <div id="nav">
       <c-flex direction="row" justify="space-between" align="center">
-        <c-text color="#ffffff" fontWeight="bold" fontSize="20px">Duasua</c-text>
+        <c-text color="#ffffff" fontWeight="bold" fontSize="20px"
+          >Duasua</c-text
+        >
         <c-box>
           <router-link to="/explore">Explore</router-link>
           <router-link to="/plants">Plants</router-link>
@@ -16,13 +18,17 @@
 </template>
 
 <style>
+@font-face {
+  font-family: Lora serif;
+  src: local('Lora') url(./assets/fonts/Lora-Regular.ttf) format('truetype');
+}
 body {
   background-color: #faf9f9;
   margin: 0;
   padding: 0;
 }
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Lora serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
