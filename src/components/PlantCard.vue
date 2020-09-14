@@ -1,24 +1,23 @@
 <template>
-  <c-box m="10px" background="#ffffff" w="380px" shadow="sm" rounded="md">
-    <c-flex direction="row">
-      <c-box>
-        <c-image
-          w="150px"
-          h="150px"
-          objectFit="cover"
-          roundedTopLeft="md"
-          roundedBottomLeft="md"
+  <div class="bg-white m-2 shadow-md rounded-md" style="width: 410px;">
+    <div class="flex flex-row">
+      <div>
+        <img
+          class="object-cover rounded-l-md"
+          style="width: 150px; height: 150px;"
           :src="plant.image_url"
         />
-      </c-box>
-      <c-box pl="10px">
-        <c-text fontSize="xs">Common name</c-text>
-        <c-text fontWeight="bold" m="0">{{ plant.common_name }}</c-text>
-        <c-text fontSize="12px">Scientific name</c-text>
-        <c-text fontSize="md">{{ plant.scientific_name }}</c-text>
-      </c-box>
-    </c-flex>
-  </c-box>
+      </div>
+      <div class="p-3">
+        <p class="font-light">Common name</p>
+        <p class="font-bold text-green-500 text-lg capitalize">
+          {{ plant.common_name }}
+        </p>
+        <p class="font-light">Scientific name</p>
+        <p class="font-medium">{{ plant.scientific_name }}</p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>

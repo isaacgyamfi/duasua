@@ -1,12 +1,11 @@
 import Vue from 'vue';
-import Chakra, { CThemeProvider } from '@chakra-ui/vue';
 import App from './App.vue';
 import router from './router';
 
-Vue.use(Chakra);
+import './assets/styles/index.css';
 
 new Vue({
   el: '#app',
   router,
-  render: (h) => h(CThemeProvider, [h(App)]),
+  render: (h) => h(App),
 }).$mount();

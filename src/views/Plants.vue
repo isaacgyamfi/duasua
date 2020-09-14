@@ -1,13 +1,13 @@
 <template>
   <div class="container">
     <div>
-      <c-flex direction="row" wrap="wrap">
+      <div class="flex flex-row flex-wrap" direction="row" wrap="wrap">
         <PlantCard
           v-bind:plant="plant"
           v-for="plant in plants"
           v-bind:key="plant.id"
         />
-      </c-flex>
+      </div>
     </div>
   </div>
 </template>
