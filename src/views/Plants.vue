@@ -1,8 +1,27 @@
 <template>
   <div class="container">
+    <div class="m-4">
+      <h3 class="text-2xl font-normal text-center">See all plants</h3>
+    </div>
     <div>
-      <div class="flex flex-row flex-wrap" direction="row" wrap="wrap">
+      <div class="flex flex-row flex-wrap">
+        <div
+          v-if="loading"
+          class="border border-gray-300 shadow rounded-md p-4 max-w-sm w-full mx-auto"
+        >
+          <div class="animate-pulse flex space-x-4">
+            <div class="rounded bg-gray-400 h-12 w-12"></div>
+            <div class="flex-1 space-y-4 py-1">
+              <div class="h-4 bg-gray-400 rounded w-3/4"></div>
+              <div class="space-y-2">
+                <div class="h-4 bg-gray-400 rounded"></div>
+                <div class="h-4 bg-gray-400 rounded w-5/6"></div>
+              </div>
+            </div>
+          </div>
+        </div>
         <PlantCard
+          v-else
           v-bind:plant="plant"
           v-for="plant in plants"
           v-bind:key="plant.id"
@@ -24,18 +43,25 @@ export default {
   data: function() {
     return {
       plants: [],
+      loading: false,
     };
   },
-  beforeMount() {
+  mounted() {
     this.getPlants();
   },
   methods: {
     async getPlants() {
-      const { data } = await axios.get(
-        'https://cors-anywhere.herokuapp.com/https://trefle.io/api/v1/plants?token=V7kaFDB9DY1LewlI_2bAECYP-7auchLN7w-lEiT0HHk',
-      );
-      this.plants = data.data;
-      console.log(this.plants.length);
+      this.loading = true;
+      try {
+        const { data } = await axios.get(
+          `https://cors-anywhere.herokuapp.com/https://trefle.io/api/v1/plants?token=${process.env.VUE_APP_API_KEY}`,
+        );
+        this.plants = data.data;
+        console.log(this.plants.length);
+        this.loading = false;
+      } catch (error) {
+        this.loading = false;
+      }
     },
   },
 };

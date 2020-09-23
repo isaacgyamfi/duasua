@@ -2,7 +2,9 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import Plants from '../views/Plants.vue';
+import Plant from '../views/Plant.vue';
 import Explore from '../views/Explore.vue';
+import Learn from '../views/Learn.vue';
 
 Vue.use(VueRouter);
 
@@ -27,9 +29,19 @@ const routes = [
     component: Plants,
   },
   {
+    path: '/plants/:id',
+    name: 'Plant',
+    component: Plant,
+  },
+  {
     path: '/explore',
     name: 'Explore',
     component: Explore,
+  },
+  {
+    path: '/learn',
+    name: 'Learn',
+    component: Learn,
   },
 ];
 

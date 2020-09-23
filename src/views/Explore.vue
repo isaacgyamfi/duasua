@@ -8,6 +8,7 @@
       <form class="shadow-sm rounded-md p-5 w-1/4 bg-white">
         <h4 class="font-semibold">Search our database</h4>
         <hr class="my-4" />
+
         <div class="w-full">
           <label
             class="block uppercase tracking-wide text-gray-700 text-xs mb-2"
@@ -17,7 +18,7 @@
           <input
             class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
             id="commonname"
-            placeholder=""
+            placeholder
           />
         </div>
         <div class="w-full">
@@ -29,7 +30,7 @@
           <input
             class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
             id="scientificname"
-            placeholder=""
+            placeholder
           />
         </div>
         <div class="w-full">
@@ -41,7 +42,7 @@
           <input
             class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
             id="genus"
-            placeholder=""
+            placeholder
           />
         </div>
         <div class="w-full">
@@ -53,7 +54,7 @@
           <input
             class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
             id="family"
-            placeholder=""
+            placeholder
           />
         </div>
         <div class="mt-5">
@@ -79,8 +80,8 @@
           <img
             class="rounded-md w-64"
             src="https://bs.floristic.org/image/o/78a8374f009e6ed2dc71ca17d18e4271ea0a2a7b"
-            alt=""
-            srcset=""
+            alt
+            srcset
           />
           <div class="pl-4">
             <div class="flex flex-row flex-wrap">
@@ -140,7 +141,6 @@
 <script>
 export default {
   name: 'Explore',
+  components: {},
 };
 </script>
-
-<style></style>
