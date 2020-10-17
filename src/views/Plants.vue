@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container mb-5">
     <div class="m-4">
       <h3 class="text-2xl font-normal text-center">See all plants</h3>
     </div>
@@ -27,6 +27,7 @@
           v-bind:key="plant.id"
         />
       </div>
+      <pagination/>
     </div>
   </div>
 </template>
@@ -35,10 +36,11 @@
 import axios from 'axios';
 
 import PlantCard from '@/components/PlantCard.vue';
+import Pagination from '@/components/Pagination.vue'
 export default {
   name: 'Plants',
   components: {
-    PlantCard,
+    PlantCard, Pagination
   },
   data: function() {
     return {
@@ -63,6 +65,7 @@ export default {
         this.loading = false;
       }
     },
+    
   },
 };
 </script>

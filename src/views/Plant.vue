@@ -64,7 +64,7 @@ export default {
   methods: {
     async getPlant() {
       const { data } = await axios.get(
-        `https://cors-anywhere.herokuapp.com/https://trefle.io/api/v1/plants/${this.plantId}?token=${process.env.API_KEY}`
+        `https://cors-anywhere.herokuapp.com/https://trefle.io/api/v1/plants/${this.plantId}?token=V7kaFDB9DY1LewlI_2bAECYP-7auchLN7w-lEiT0HHk`
       );
       this.plant = data.data;
     },

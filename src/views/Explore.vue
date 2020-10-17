@@ -139,8 +139,13 @@
 </template>
 
 <script>
+// import Autocomplete from '@trevoreyre/autocomplete-vue'
+
 export default {
   name: 'Explore',
-  components: {},
+  // components: {Autocomplete},
+  // data: {
+    
+  // }
 };
 </script>

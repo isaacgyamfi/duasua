@@ -65,12 +65,6 @@ git clone https://github.com/unicorndevelopers360/duasua.git
 yarn install
 ```
 
-4. Enter your API in `config.js`
-
-```JS
-const API_KEY = 'ENTER YOUR API';
-```
-
 <!-- CONTRIBUTING -->
 
 ## Contributing
