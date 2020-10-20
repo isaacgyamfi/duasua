@@ -4,7 +4,6 @@ import Home from '../views/Home.vue';
 import Plants from '../views/Plants.vue';
 import Plant from '../views/Plant.vue';
 import Explore from '../views/Explore.vue';
-import Learn from '../views/Learn.vue';
 
 Vue.use(VueRouter);
 
@@ -37,11 +36,6 @@ const routes = [
     path: '/explore',
     name: 'Explore',
     component: Explore,
-  },
-  {
-    path: '/learn',
-    name: 'Learn',
-    component: Learn,
   },
 ];
 

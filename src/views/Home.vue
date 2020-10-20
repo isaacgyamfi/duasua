@@ -3,6 +3,12 @@
     <div class="flex">
       <div class="w-1/2 p-4 flex justify-center flex-col">
         <p class="text-3xl text-white">
+          <span class="italic font-bold">Dua</span> means Tree or Plant.
+        </p>
+        <p class="text-3xl text-white">
+          <span class="italic font-bold">Sua</span> means 'to learn'.
+        </p>
+        <p class="text-3xl text-white">
           “A passionate look, touch or a hug on a plant is enough to open your
           inner eyes than going for a serious yoga and other therapies”
         </p>
@@ -19,19 +25,14 @@
           </button>
         </div>
       </div>
-      <div class="w-1/2 flex justify-center align-center">
-        <home-quiz/>
-      </div>
     </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HomeQuiz from '../components/HomeQuiz.vue'
 export default {
   name: 'Home',
-  components: {HomeQuiz}
 };
 </script>
 
